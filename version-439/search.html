@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>影片搜索-国产好剧</title>
+  <meta name="description" content="全站影片搜索页，可按片名、地区、年份、类型、标签查找国产电视剧与热播影视内容。">
+  <meta name="keywords" content="国产电视剧视频免费在线观看：高清电视剧大全与热播剧-国产好剧推荐,国产,视频,免费,在线观看,高清,影视大全">
+  <link rel="stylesheet" href="assets/css/original-theme.css">
+  <link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+<header class="bg-stone-900/95 backdrop-blur-sm text-stone-100 sticky top-0 z-50 border-b border-stone-800">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <a href="index.html" class="flex items-center gap-3 group">
+        <span class="site-logo-mark">剧</span>
+        <span>
+          <strong class="block text-xl font-bold group-hover:text-amber-500 transition-colors">国产好剧</strong>
+          <span class="block text-xs text-stone-400">高清电视剧大全与热播剧</span>
+        </span>
+      </a>
+      <nav class="hidden md:flex items-center gap-7">
+        <a href="index.html" class="nav-link hover:text-amber-500 transition-colors">首页</a> <a href="movies.html" class="nav-link hover:text-amber-500 transition-colors">片库</a> <a href="categories.html" class="nav-link hover:text-amber-500 transition-colors">分类</a> <a href="ranking.html" class="nav-link hover:text-amber-500 transition-colors">排行榜</a> <a href="search.html" class="nav-link is-active hover:text-amber-500 transition-colors">搜索</a>
+        <a href="category-domestic-hot.html" class="nav-link hover:text-amber-500 transition-colors">国产影视</a> <a href="category-drama.html" class="nav-link hover:text-amber-500 transition-colors">剧情</a> <a href="category-romance.html" class="nav-link hover:text-amber-500 transition-colors">爱情</a> <a href="category-comedy.html" class="nav-link hover:text-amber-500 transition-colors">喜剧</a> <a href="category-suspense-thriller.html" class="nav-link hover:text-amber-500 transition-colors">悬疑</a>
+      </nav>
+      <button type="button" class="md:hidden hover:text-amber-500 transition-colors text-2xl" data-menu-button aria-label="打开导航">☰</button>
+    </div>
+  </div>
+  <nav class="mobile-menu md:hidden border-t border-stone-800" data-mobile-menu>
+    <div class="px-4 py-4 space-y-1">
+      <a href="index.html" class="block py-2 hover:text-amber-500 transition-colors">首页</a> <a href="movies.html" class="block py-2 hover:text-amber-500 transition-colors">片库</a> <a href="categories.html" class="block py-2 hover:text-amber-500 transition-colors">分类</a> <a href="ranking.html" class="block py-2 hover:text-amber-500 transition-colors">排行榜</a> <a href="search.html" class="block py-2 hover:text-amber-500 transition-colors">搜索</a> <a href="category-domestic-hot.html" class="block py-2 hover:text-amber-500 transition-colors">国产热播</a> <a href="category-drama.html" class="block py-2 hover:text-amber-500 transition-colors">剧情佳作</a> <a href="category-romance.html" class="block py-2 hover:text-amber-500 transition-colors">爱情片单</a> <a href="category-comedy.html" class="block py-2 hover:text-amber-500 transition-colors">喜剧专区</a> <a href="category-suspense-thriller.html" class="block py-2 hover:text-amber-500 transition-colors">悬疑惊悚</a> <a href="category-action-crime.html" class="block py-2 hover:text-amber-500 transition-colors">动作犯罪</a> <a href="category-scifi-fantasy.html" class="block py-2 hover:text-amber-500 transition-colors">科幻奇幻</a> <a href="category-animation-family.html" class="block py-2 hover:text-amber-500 transition-colors">动画家庭</a> <a href="category-history-war.html" class="block py-2 hover:text-amber-500 transition-colors">历史战争</a> <a href="category-variety-doc.html" class="block py-2 hover:text-amber-500 transition-colors">综艺纪实</a> <a href="category-world-cinema.html" class="block py-2 hover:text-amber-500 transition-colors">海外精选</a> <a href="category-new-releases.html" class="block py-2 hover:text-amber-500 transition-colors">热播新片</a>
+    </div>
+  </nav>
+</header>
+<main>
+  <section class="bg-gradient-to-br from-stone-950 via-stone-900 to-stone-800 text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">影片搜索</h1>
+      <p class="text-white/90 text-lg max-w-3xl">输入片名、年份、地区、类型或标签查找影片，搜索结果会直接链接到对应详情页。</p>
+    </div>
+  </section>
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <div class="bg-white rounded-xl shadow-md p-5 mb-8 filter-box">
+      <input class="filter-input" type="search" placeholder="输入关键词搜索全站影片" data-global-search autofocus>
+      <div class="flex items-center justify-center text-stone-600 px-4">匹配 <strong class="text-amber-700 px-1" data-search-total>0</strong> 部</div>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-6 search-result-list" data-search-results></div>
+  </section>
+</main>
+<footer class="bg-stone-950 text-stone-400 border-t border-stone-900 mt-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <div class="grid md:grid-cols-3 gap-8">
+      <div>
+        <div class="flex items-center gap-3 mb-4">
+          <span class="site-logo-mark">剧</span>
+          <strong class="text-white text-xl">国产好剧</strong>
+        </div>
+        <p class="text-sm leading-relaxed">围绕国产电视剧提供视频免费在线观看服务，包含高清电视剧大全与热播剧内容，支持在线播放与分类检索，方便查找剧集。</p>
+      </div>
+      <div>
+        <h2 class="text-white font-semibold mb-4">热门入口</h2>
+        <div class="grid grid-cols-2 gap-2 text-sm">
+          <a href="movies.html" class="hover:text-amber-500 transition-colors">全部影片</a>
+          <a href="categories.html" class="hover:text-amber-500 transition-colors">分类总览</a>
+          <a href="ranking.html" class="hover:text-amber-500 transition-colors">热播排行</a>
+          <a href="search.html" class="hover:text-amber-500 transition-colors">影片搜索</a>
+        </div>
+      </div>
+      <div>
+        <h2 class="text-white font-semibold mb-4">站内检索</h2>
+        <p class="text-sm leading-relaxed">可按片名、年份、地区、类型、标签进入对应详情页，详情页提供剧情简介、影片评价和相关推荐。</p>
+      </div>
+    </div>
+    <div class="border-t border-stone-900 mt-8 pt-8 text-sm text-center">
+      <p>© 2026 国产好剧. 高清影视内容索引</p>
+    </div>
+  </div>
+</footer>
+<script src="assets/js/site.js"></script>
+<script src="assets/js/search-data.js"></script>
+<script src="assets/js/search.js"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?95df08bc498ee0333203841fd6fee1eb";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>
